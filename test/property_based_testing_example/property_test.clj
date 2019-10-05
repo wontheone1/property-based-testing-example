@@ -27,7 +27,9 @@
       (>= attacked-hp
           (:hp (attack attacker attacked))))))
 
-(fact
+#_(fact
   "HP of 'attacked' does not increase after attack"         ; This should fail
   (tc/quick-check 100 prop-HP-of-attacked-does-not-increase-after-attack)
   => (contains {:pass true}))
+
+#_(prn (gen/sample gen/string 50))
