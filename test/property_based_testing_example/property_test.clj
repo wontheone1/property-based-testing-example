@@ -19,13 +19,11 @@
     (let [attacker {:name   "attacker"
                     :ap     attacker-ap
                     :dp     attacker-dp
-                    :hp     attacker-hp
-                    :alive? true}
+                    :hp     attacker-hp}
           attacked {:name   "attacked"
                     :ap     attacked-ap
                     :dp     attacked-dp
-                    :hp     attacked-hp
-                    :alive? true}]
+                    :hp     attacked-hp}]
       (>= attacked-hp
           (:hp (attack attacker attacked))))))
 

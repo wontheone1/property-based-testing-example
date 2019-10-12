@@ -10,8 +10,7 @@
     => {:name   "Barbarian"
         :ap     20
         :dp     0
-        :hp     40
-        :alive? true})
+        :hp     40})
 
   (fact
     "Barbarian attacks Goblin and Goblin dies"
@@ -19,5 +18,4 @@
     => {:name   "Goblin"
         :ap     10
         :dp     1
-        :hp     -4
-        :alive? false}))
+        :hp     -4}))
