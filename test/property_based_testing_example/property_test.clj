@@ -16,18 +16,18 @@
                  [attacked-ap
                   attacked-dp
                   attacked-hp] (gen/tuple positive-int-gen positive-int-gen positive-int-gen)]
-    (let [attacker {:name   "attacker"
-                    :ap     attacker-ap
-                    :dp     attacker-dp
-                    :hp     attacker-hp}
-          attacked {:name   "attacked"
-                    :ap     attacked-ap
-                    :dp     attacked-dp
-                    :hp     attacked-hp}]
+    (let [attacker {:name "attacker"
+                    :ap   attacker-ap
+                    :dp   attacker-dp
+                    :hp   attacker-hp}
+          attacked {:name "attacked"
+                    :ap   attacked-ap
+                    :dp   attacked-dp
+                    :hp   attacked-hp}]
       (>= attacked-hp
           (:hp (attack attacker attacked))))))
 
-#_(fact
+(fact
   "HP of 'attacked' does not increase after attack"         ; This should fail
   (tc/quick-check 100 prop-HP-of-attacked-does-not-increase-after-attack)
   => (contains {:pass true}))
